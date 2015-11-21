@@ -13,6 +13,7 @@ These are HTML strings. As part of the course, you'll be using JavaScript functi
 replace the %data% placeholder text you see in them.
 */
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
+
 var HTMLheaderRole = '<span>%data%</span><hr/>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
@@ -85,7 +86,11 @@ function logClicks(x,y) {
 }
 
 $(document).click(function(loc) {
-  // your code goes here!
+ var x,y;
+ x = loc.pageX;
+ y = loc.pageY;
+
+ logClicks(x,y);
 });
 
 
@@ -142,6 +147,16 @@ function initializeMap() {
 
     return locations;
   }
+  
+//  function locationizer(work_obj){
+   // var locationArray = [];
+    
+  //  for (var job in work_obj.jobs) {
+  //    var newLocation = work_obj.jobs[job].location;
+  //    locationArray.push(newLocation)
+  //  }
+  // return locationArray;
+  //}
 
   /*
   createMapMarker(placeData) reads Google Places search results to create map pins.
