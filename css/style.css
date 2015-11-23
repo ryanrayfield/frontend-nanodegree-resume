@@ -13,7 +13,13 @@ h6 {
   margin:0;
   font-family: "Roboto", sans-serif;
 }
-
+html { 
+  background: url(../images/Philadelphia.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 .clear-fix {
   overflow: auto;
 }
@@ -22,6 +28,10 @@ h6 {
 .work-entry,
 .project-entry {
   padding: 0 5%;
+  flex-wrap: nowrap;
+}
+#projects {
+  flex-wrap: nowrap;
 }
 
 h1 {
