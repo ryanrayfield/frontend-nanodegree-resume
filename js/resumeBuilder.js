@@ -264,3 +264,13 @@ $('#main').append(internationalizeButton);
 //inName(bio.name);
 
 $('#mapDiv').append(googleMap);
+
+//Added functionality
+
+//shine on you crazy text
+var shine = new Shine(document.getElementById('header'));
+window.addEventListener('mousemove', function(event) {
+  shine.light.position.x = event.clientX;
+  shine.light.position.y = event.clientY;
+  shine.draw();
+}, false);

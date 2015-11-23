@@ -13,13 +13,7 @@ h6 {
   margin:0;
   font-family: "Roboto", sans-serif;
 }
-html { 
-  background: url(../images/Philadelphia.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
+
 .clear-fix {
   overflow: auto;
 }
@@ -112,6 +106,7 @@ a {
 #skills-h3 {
   color: #f5ae23;
   display: none;
+
 }
 
 .orange {
@@ -137,10 +132,17 @@ a {
   background-color: #4a4a4a;
 }
 
-/* TODO: Replace with image later */
-#header {
-  background-color: #484848;
+#header{
+  background: url(../images/Philadelphia2.jpg) no-repeat center center fixed;
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
 }
+/* TODO: Replace with image later */
+
+
 
 .flex-box {
   display: -webkit-flex;
@@ -168,6 +170,8 @@ ul {
 
 img {
   padding: 10px;
+ margin:15 px;
+   border:3px solid whitesmoke;
 }
 
 span {
