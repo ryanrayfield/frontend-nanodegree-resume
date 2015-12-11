@@ -1,0 +1,27 @@
+{
+  "name": "'",
+  "description": "Udacity Resume Project",
+  "main": "intex.html",
+  "moduleType": [],
+  "keywords": [
+    "resume"
+  ],
+  "authors": [
+    "Ryan"
+  ],
+  "license": "MIT",
+  "homepage": "ryanrayfield.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "iron-a11y-keys-behavior": "PolymerElements/iron-a11y-keys-behavior#^1.0.0",
+    "iron-icons": "PolymerElements/iron-icons#^1.0.0",
+    "paper-fab": "PolymerElements/paper-fab#^1.0.0",
+    "paper-tooltip": "PolymerElements/paper-tooltip#^1.0.0"
+  }
+}

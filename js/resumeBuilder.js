@@ -112,13 +112,13 @@ var bio = {
 		"mobile": "609-555-5555",
 		"email": "r***@gmail.com",
 		"github": "ryanrayfield",
-		"location": "Philadelphia PA",
-		"twitter": "koaray"
+		"twitter": "koaray",
+		"location": "Philadelphia PA"
 	},
-
-	"bioPic": "http://placeimg.com/150/150",
-	"welcomeMessage": "A man with a plan",
-	"skills": ["VB Script", "T-SQL", "html", "css", "Javascript"]
+"welcomeMessage": "A man with a plan",	
+"skills": ["VB Script", "T-SQL", "html", "css", "Javascript"],
+	"bioPic": "http://placeimg.com/150/150"
+	
 };
 
 bio.display = function () {
@@ -135,28 +135,29 @@ bio.display = function () {
 
 
 	var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-	$("#topContacts").append(formattedMobile);
+	$("#topContacts,#footerContacts").append(formattedMobile);
 	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
-	$("#topContacts").append(formattedEmail);
+	$("#topContacts,#footerContacts").append(formattedEmail);
 	var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-	$("#topContacts").append(formattedTwitter);
+	$("#topContacts,#footerContacts").append(formattedTwitter);
 	var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-	$("#topContacts").append(formattedGithub);
+	$("#topContacts,#footerContacts").append(formattedGithub);
 	var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-	$("#topContacts").append(formattedLocation);
+	$("#topContacts,#footerContacts").append(formattedLocation);
 
 	console.log(bio.contacts.location);
 	if (bio.skills.length > 0) {
 
 		$("#header").append(HTMLskillsStart);
 
-		var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+		var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]).replace("%id%", "s0");
 		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%", bio.skills[1]);
+		$("#s0").append("<paper-tooltip for=\"s0\">Sweet skill description</paper-tooltip>")
+		formattedSkill = HTMLskills.replace("%data%", bio.skills[1]).replace("%id%", "s1");
 		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
+		formattedSkill = HTMLskills.replace("%data%", bio.skills[2]).replace("%id%", "s2");
 		$("#skills").append(formattedSkill);
-		formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
+		formattedSkill = HTMLskills.replace("%data%", bio.skills[3]).replace("%id%", "s3");
 		$("#skills").append(formattedSkill);
 	};
 
@@ -267,8 +268,19 @@ $('#mapDiv').append(googleMap);
 
 //Added functionality
 
+
 //shine on you crazy text
-var shine = new Shine(document.getElementById('header'));
+// all parameters are optional and can be changed later
+ var config = new shinejs.Config({
+      numSteps: 8,
+      opacity: 1,
+      shadowRGB: new shinejs.Color(255, 255, 255)
+    });
+
+// pass the config in the constructor
+ //var shine = new shinejs.Shine(document.getElementById('your-shine-object'), config);
+
+var shine = new shinejs.Shine(document.getElementById('name'),config);
 window.addEventListener('mousemove', function(event) {
   shine.light.position.x = event.clientX;
   shine.light.position.y = event.clientY;
