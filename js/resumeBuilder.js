@@ -152,7 +152,7 @@ bio.display = function () {
 
 		var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]).replace("%id%", "s0");
 		$("#skills").append(formattedSkill);
-		$("#s0").append("<paper-tooltip for=\"s0\">Sweet skill description</paper-tooltip>")
+		//$("#s0").append("<paper-tooltip for=\"s0\">Sweet skill description</paper-tooltip>")
 		formattedSkill = HTMLskills.replace("%data%", bio.skills[1]).replace("%id%", "s1");
 		$("#skills").append(formattedSkill);
 		formattedSkill = HTMLskills.replace("%data%", bio.skills[2]).replace("%id%", "s2");
@@ -261,13 +261,22 @@ function inName(name) {
 	return internationalName;
 	*/
 };
-$('#main').append(internationalizeButton);
+//$('#main').append(internationalizeButton);
 //inName(bio.name);
 
 $('#mapDiv').append(googleMap);
 
 //Added functionality
 
+var el = document.getElementById('skills');
+var sortable = Sortable.create(el);
+
+// List with handle
+var elm = document.getElementById('projects');
+Sortable.create(elm, {
+  handle: '.project-entry',
+  animation: 150
+});
 
 //shine on you crazy text
 // all parameters are optional and can be changed later
@@ -276,6 +285,7 @@ $('#mapDiv').append(googleMap);
       opacity: 1,
       shadowRGB: new shinejs.Color(255, 255, 255)
     });
+
 
 // pass the config in the constructor
  //var shine = new shinejs.Shine(document.getElementById('your-shine-object'), config);

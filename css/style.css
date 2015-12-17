@@ -179,6 +179,12 @@ span {
   padding: 5px;
 }
 
+
+.my-handle {
+  cursor: move;
+  cursor: -webkit-grabbing;
+}
+
 #lets-connect {
   text-align: center;
 }
@@ -209,6 +215,7 @@ span {
   }
 }
 
+
 #map {
   display: block;
   height: 100%;
@@ -220,6 +227,7 @@ span {
   width: 100%;
   padding-bottom: 5%;
 }
+
 
 @media only screen and (min-width: 750px) {
   #skills-h3,

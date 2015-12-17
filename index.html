@@ -37,22 +37,29 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   the DOM. jQuery is fast and easy to use, but it doesn't do anything
   you can't accomplish with vanilla (regular) JavaScript.
   -->
-  <script src="js/jQuery.js"></script>
+  <!--polymer -->
+ 
 
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+ <!--   <script src="js/jQuery.js"></script>-->
+  
   <!-- More on helper.js in the class -->
   <script src="js/helper.js"></script>
 
-  <!--
+ <!--
   Uncomment the <script> tag below when you're ready to add an interactive
   Google Map to your resume!
   -->
  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> 
-  <script src="C:/Sites/shine/dist/shine.min.js"></script>
+   <script src="C:/Sites/shine/dist/shine.min.js"></script>
+  <script src="http://rubaxa.github.io/Sortable/Sortable.js"></script>
+ 
 <!-- <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
   <meta name="viewport" content="width=device-width">
 </head>
-<body>
-  
+
+ 
   <div id="main">
      <!-- You'll be deleting this line in the course -->
 
@@ -68,9 +75,10 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     <div style="clear: both;"></div>
     <div id="workExperience" class="gray">
       <h2>Work Experience</h2>
+    
     </div>
     <div id="projects">
-      <h2>Projects</h2>
+      <h2>Projects (Drag and drop to order them by most relvant to you!)</h2>
     </div>
     <div id="education" class="gray">
       <h2>Education</h2>
