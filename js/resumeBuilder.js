@@ -73,13 +73,13 @@ var projects = {
 		"title": "Portfolio",
 		"dates": "Oct",
 		"description": "Great Portfolio",
-		"images": ["http://placeimg.com/350/350/nature","http://placeimg.com/350/350/nature","http://placeimg.com/350/350/nature"]
+		"images": ["http://placeimg.com/350/350/nature", "http://placeimg.com/350/350/nature", "http://placeimg.com/350/350/nature"]
 	}
 		, {
 			"title": "Resume",
 			"dates": "Nov",
 			"description": "Great Resume",
-			"images": ["http://placeimg.com/350/350/nature","http://placeimg.com/350/350/nature","http://placeimg.com/350/350/nature"]
+			"images": ["http://placeimg.com/350/350/nature", "http://placeimg.com/350/350/nature", "http://placeimg.com/350/350/nature"]
 
 		}]
 };
@@ -115,10 +115,10 @@ var bio = {
 		"twitter": "koaray",
 		"location": "Philadelphia PA"
 	},
-"welcomeMessage": "A man with a plan",	
-"skills": ["VB Script", "T-SQL", "html", "css", "Javascript"],
-	"bioPic": "http://placeimg.com/150/150"
-	
+	"welcomeMessage": "A man with a plan",
+	"skills": ["VB Script", "T-SQL", "html", "css", "Javascript"],
+	"biopic": "http://placeimg.com/150/150"
+
 };
 
 bio.display = function () {
@@ -126,12 +126,12 @@ bio.display = function () {
 	$("#header").prepend(formattedRole);
 	var formattedName = HTMLheaderName.replace("%data%", bio.name);
 	$("#header").prepend(formattedName);
-	
-	var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic)
+
+	var formattedBioPic = HTMLbiopic.replace("%data%", bio.biopic)
 	$("#header").append(formattedBioPic);
 	var formattedwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage)
 	$("#header").append(formattedwelcomeMsg);
-	
+
 
 
 	var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
@@ -185,25 +185,25 @@ var education = {
 	],
 	"onlineCourses": [
 		{
-		"title": "Into to HTML",
-		"school": "Udacity",
-		"dates": "October - December 2015",
-		"url": "www.udacity.com"
-	},
-	{
-		"title": "Intro to Electrical Engineering",
-		"school": "MIT",
-		"dates": "October - December 2013",
-		"url": "www.edx.org"
+			"title": "Into to HTML",
+			"school": "Udacity",
+			"dates": "October - December 2015",
+			"url": "www.udacity.com"
+		},
+		{
+			"title": "Intro to Electrical Engineering",
+			"school": "MIT",
+			"dates": "October - December 2013",
+			"url": "www.edx.org"
 
 		}]
 };
 
 
 education.display = function () {
-		$("#education").append(HTMLschoolStart);
+	$("#education").append(HTMLschoolStart);
 	for (school in education.schools) {
-		
+
 		console.log(education.schools[school]);
 		var formattedschoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
 		$(".education-entry:last").append(formattedschoolName);
@@ -216,9 +216,9 @@ education.display = function () {
 		var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors);
 		$(".education-entry:last").append(formattedMajor);
 	};
-		
-		$("#education:last").append(HTMLonlineClasses);
-			
+
+	$("#education:last").append(HTMLonlineClasses);
+
 	for (titles in education.onlineCourses) {
 		$("#education").append(HTMLschoolStart);
 		console.log(education.onlineCourses[titles]);
@@ -274,25 +274,25 @@ var sortable = Sortable.create(el);
 // List with handle
 var elm = document.getElementById('projects');
 Sortable.create(elm, {
-  handle: '.project-entry',
-  animation: 150
+	handle: '.project-entry',
+	animation: 150
 });
 
 //shine on you crazy text
 // all parameters are optional and can be changed later
- var config = new shinejs.Config({
-      numSteps: 8,
-      opacity: 1,
-      shadowRGB: new shinejs.Color(255, 255, 255)
-    });
+var config = new shinejs.Config({
+	numSteps: 8,
+	opacity: 1,
+	shadowRGB: new shinejs.Color(255, 255, 255)
+});
 
 
 // pass the config in the constructor
- //var shine = new shinejs.Shine(document.getElementById('your-shine-object'), config);
+//var shine = new shinejs.Shine(document.getElementById('your-shine-object'), config);
 
-var shine = new shinejs.Shine(document.getElementById('name'),config);
-window.addEventListener('mousemove', function(event) {
-  shine.light.position.x = event.clientX;
-  shine.light.position.y = event.clientY;
-  shine.draw();
+var shine = new shinejs.Shine(document.getElementById('name'), config);
+window.addEventListener('mousemove', function (event) {
+	shine.light.position.x = event.clientX;
+	shine.light.position.y = event.clientY;
+	shine.draw();
 }, false);

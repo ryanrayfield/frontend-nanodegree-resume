@@ -64,10 +64,10 @@ var googleMap = '<div id="map"></div>';
 The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
 */
 //$(document).ready(function() {
-  //$('button').click(function() {
-    //var iName = inName() || function(){};
-   // $('#name').html(iName);  
-  //});
+//$('button').click(function() {
+//var iName = inName() || function(){};
+// $('#name').html(iName);  
+//});
 //});
 
 /*
@@ -75,22 +75,22 @@ The next few lines about clicks are for the Collecting Click Locations quiz in L
 */
 clickLocations = [];
 
-function logClicks(x,y) {
+function logClicks(x, y) {
   clickLocations.push(
     {
       x: x,
       y: y
     }
-  );
+    );
   console.log('x location: ' + x + '; y location: ' + y);
 }
 
-$(document).click(function(loc) {
- var x,y;
- x = loc.pageX;
- y = loc.pageY;
+$(document).click(function (loc) {
+  var x, y;
+  x = loc.pageX;
+  y = loc.pageY;
 
- logClicks(x,y);
+  logClicks(x, y);
 });
 
 
@@ -148,8 +148,8 @@ function initializeMap() {
     return locations;
   }
   
-//  function locationizer(work_obj){
-   // var locationArray = [];
+  //  function locationizer(work_obj){
+  // var locationArray = [];
     
   //  for (var job in work_obj.jobs) {
   //    var newLocation = work_obj.jobs[job].location;
@@ -186,8 +186,8 @@ function initializeMap() {
     });
 
     // hmmmm, I wonder what this is about...
-    google.maps.event.addListener(marker, 'click', function() {
-     infoWindow.open(map, marker);
+    google.maps.event.addListener(marker, 'click', function () {
+      infoWindow.open(map, marker);
     });
 
     // this is where the pin actually gets added to the map.
@@ -254,7 +254,7 @@ window.addEventListener('load', initializeMap);
 
 //Vanilla JS way to listen for resizing of the window
 //and adjust map bounds
-window.addEventListener('resize', function(e) {
-//Make sure the map bounds get updated on page resize
- map.fitBounds(mapBounds);
+window.addEventListener('resize', function (e) {
+  //Make sure the map bounds get updated on page resize
+  map.fitBounds(mapBounds);
 });
