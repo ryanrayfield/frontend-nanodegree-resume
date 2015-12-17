@@ -126,8 +126,8 @@ bio.display = function () {
 	var formattedName = HTMLheaderName.replace("%data%", bio.name);
 	$("#header").prepend(formattedName);
 
-	var formattedBioPic = HTMLbiopic.replace("%data%", bio.biopic);
-	$("#header").append(formattedBioPic);
+	var formattedbioPic = HTMLbioPic.replace("%data%", bio.biopic);
+	$("#header").append(formattedbioPic);
 	var formattedwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 	$("#header").append(formattedwelcomeMsg);
 
