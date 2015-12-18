@@ -173,6 +173,7 @@ var education = {
 			"degree": "BA",
 			"majors": ["Material Science", "Mathematics"],
 			"dates": "2003-2008",
+			"url": "www.UPenn.edu"
 		},
 		{
 			"name": "Udacity",
@@ -180,6 +181,7 @@ var education = {
 			"degree": "Nano",
 			"majors": ["Front End Developer", "Full Stack Engineer"],
 			"dates": "October - December 2015",
+			"url": "wwww.udacity.com"
 		}
 	],
 	"onlineCourses": [
