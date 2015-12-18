@@ -39,7 +39,9 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   you can't accomplish with vanilla (regular) JavaScript.
   -->
     <!--polymer -->
-
+<script src="bower_components/webcomponentsjs/webcomponents-lite.min.js">
+    </script>
+    <link rel="import" href="bower_components/paper-tool-tip/paper-tooltip.html">
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -70,6 +72,12 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     resume below. You can pretty easily figure out what each section will
     display by looking at the id or at what's written between the <h2> tags.
     -->
+        <paper-tooltip for="red" class="custom" position="left" animation-delay="0">
+          <img src="http://i.imgur.com/OuUe8Da.jpg">
+          Rich-text tooltips are doable but against the Material Design spec.
+        </paper-tooltip>
+        
+       
     <div id="header" class="center-content clear-fix">
         <ul id="topContacts" class="flex-box"></ul>
     </div>
