@@ -117,7 +117,7 @@ var bio = {
 	"welcomeMessage": "A man with a plan",
 	"skills": ["VB Script", "T-SQL", "html", "css", "Javascript"],
 	"biopic": "http://placeimg.com/150/150"
-
+	
 };
 
 bio.display = function () {
@@ -188,13 +188,13 @@ var education = {
 		{
 			"title": "Into to HTML",
 			"school": "Udacity",
-			"dates": "October - December 2015",
+			"date": "October - December 2015",
 			"url": "www.udacity.com"
 		},
 		{
 			"title": "Intro to Electrical Engineering",
 			"school": "MIT",
-			"dates": "October - December 2013",
+			"date": "October - December 2013",
 			"url": "www.edx.org"
 
 		}]
@@ -227,8 +227,8 @@ education.display = function () {
 		$(".education-entry:last").append(formattedOnlineTitle);
 		var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[titles].school);
 		$(".education-entry:last").append(formattedOnlineSchool);
-		var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[titles].dates);
-		$(".education-entry:last").append(formattedOnlineDates);
+		var formattedOnlineDate = HTMLonlineDates.replace("%data%", education.onlineCourses[titles].date);
+		$(".education-entry:last").append(formattedOnlineDate);
 		var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[titles].url);
 		$(".education-entry:last").append(formattedOnlineURL);
 
