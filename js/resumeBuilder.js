@@ -172,7 +172,7 @@ var education = {
 			"location": "Philadeliphia",
 			"degree": "BA",
 			"majors": ["Material Science", "Mathematics"],
-			"dates": "2003-2008",
+			"dates": 2008,
 			"url": "www.UPenn.edu"
 		},
 		{
@@ -180,7 +180,7 @@ var education = {
 			"location": "San Fran",
 			"degree": "Nano",
 			"majors": ["Front End Developer", "Full Stack Engineer"],
-			"dates": "October - December 2015",
+			"dates": 2015,
 			"url": "wwww.udacity.com"
 		}
 	],
@@ -188,13 +188,13 @@ var education = {
 		{
 			"title": "Into to HTML",
 			"school": "Udacity",
-			"date": "October - December 2015",
+			"date": 2015,
 			"url": "www.udacity.com"
 		},
 		{
 			"title": "Intro to Electrical Engineering",
 			"school": "MIT",
-			"date": "October - December 2013",
+			"date": 2013,
 			"url": "www.edx.org"
 
 		}]
