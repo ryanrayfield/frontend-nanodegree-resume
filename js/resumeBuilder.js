@@ -28,22 +28,22 @@ var work = {
 		"dates": "2007-2009",
 		"description": "Power Point Monkey",
 		"images": ["http://placeimg.com/150/150/", "http://placeimg.com/150/150/", "http://placeimg.com/150/150/"]
-	}, {
-			"employer": "Proscape",
-			"title": "Reporting and Anlytics lead",
-			"location": "Horsham, PA",
-			"dates": "2009-2012",
-			"description": "Led reporting team",
-			"images": ["http://placeimg.com/150/150/", "http://placeimg.com/150/150/", "http://placeimg.com/150/150/"]
-		},
-		 {
-			"employer": "US Squash",
-			"title": "Director of Technology",
-			"location": "New York, NY",
-			"dates": "2012-present",
-			"description": "Head of product and leader of engineering teams",
-			"images": ["http://placeimg.com/150/150/", "http://placeimg.com/150/150/", "http://placeimg.com/150/150/"]
-		}
+			}, {
+					"employer": "Proscape",
+					"title": "Reporting and Anlytics lead",
+					"location": "Horsham, PA",
+					"dates": "2009-2012",
+					"description": "Led reporting team",
+					"images": ["http://placeimg.com/150/150/", "http://placeimg.com/150/150/", "http://placeimg.com/150/150/"]
+				},
+				{
+					"employer": "US Squash",
+					"title": "Director of Technology",
+					"location": "New York, NY",
+					"dates": "2012-present",
+					"description": "Head of product and leader of engineering teams",
+					"images": ["http://placeimg.com/150/150/", "http://placeimg.com/150/150/", "http://placeimg.com/150/150/"]
+				}
 	]
 };
 
@@ -243,27 +243,6 @@ education.display();
 
 
 
-function inName(name) {
-	name = name.trim().split(" ");
-	console.log(name);
-	name[1] = name[1].toUpperCase();
-	name[0] = name[0].slice(0, 1).toUpperCase() +
-	name[0].slice(1).toLowerCase();
-
-
-	return name[0] + " " + name[1];
-	/*
-	var fullName = name.trim().split(" ");
-	console.log(fullName);
-	var firstIn=fullName[0].slice(0,1).toUpperCase();
-	firstIn.slice(1).toLowerCase();
-	var lastIn = fullName[1].toUpperCase();
-	var internationalName = firstIn+" "+lastIn;
-	return internationalName;
-	*/
-}
-//$('#main').append(internationalizeButton);
-//inName(bio.name);
 
 $('#mapDiv').append(googleMap);
 
