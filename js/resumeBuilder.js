@@ -1,17 +1,4 @@
-/*
-This is empty on purpose! Your code to build the resume will go here.
- */
-/*
-$("#main").append("Ryan Rayfield");
-var awesomeThoughts = "I am Ryan and I am AWESOME";
-console.log(awesomeThoughts);
 
-var funThoughts = awesomeThoughts.replace("AWESOME", "fun");
-
-console.log(funThoughts);
-$("#main").append(funThoughts);
-*/
-//var skills = ["VB Script", "T-SQL", "html", "css", "Javascript"];
 var work = {
     "jobs": [{
         "employer": "Accenture",
